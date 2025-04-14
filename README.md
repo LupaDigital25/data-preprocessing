@@ -1,30 +1,32 @@
-# data-preprocessing
+# Data Preprocessing Pipeline
 
-- data03 to ......
+This repository contains tools and scripts to clean, deduplicate, and standardize raw news data and topic labels. It is a critical component in the LupaDigital25 ecosystem, preparing datasets for downstream tasks such as analysis and visualization in a web application.
 
-- topicEDA.ipynb is used to analyze the data, and create examples of possible interactions/visualizations with the data for the web application
+## Project Structure
 
+#### `dataPrep.ipynb`
+- Used with the extracted data from `data/news/` to preprocess articles for the web application.
+- Handles tasks such as formatting columns, removing duplicates, and standardizing structure.
+- Outputs the cleaned dataset to `data/news_preprocessed/`, which is used in further applications.
 
----
+#### `dataPrep topicEDA.ipynb`
+- Performs exploratory data analysis (EDA) on the topic labels.
+- Helps understand the distribution, frequency, and structure of topics in the dataset.
 
-## notebooks
+#### `dataPrep topicPrep.ipynb`
+- Preprocesses and simplifies the topic labels.
+- Maps original (often inconsistent) topics to a cleaner set of standardized topics.
+- Removes unmapped or invalid topics to streamline the preprocessing in `dataPrep.ipynb`.
 
-`dataPrep.ipynb`
+#### `dataEDA.ipynb`
+- Used to analyze the overall preprocessed data.
+- Demonstrates example visualizations and interactions for integrating with the web application.
 
-is used with the extracted data (data/news) to preprocess the data for the web application (columns, removind duplicates, etc.)
+## Data Files
 
-- used `dataPrep topicEDA.ipynb` to get to know better the topics and the data
+- `topics.txt`: List of unique cleaned topic labels used in the dataset.
+- `topics.json`: Dictionary mapping original raw topics to cleaned and standardized versions.
 
-- used `dataPrep topicPrep.ipynb` to preprocess the topics in order to be simplicate the dataPrep since this way ii was just mapping the old topics into the new ones and remove the ones which the map was non existent
+## Output
 
-the preprocessed data was then saved to ......
-
-`dataEDA.ipynb`
-
-.........
-
-## data files
-
-`topics.txt`
-
-`topics.json`
+- The preprocessed data is saved to `data/news_preprocessed/` and is intended for downstream tasks such as analysis, or frontend integration.
