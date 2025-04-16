@@ -26,6 +26,7 @@ This repository contains tools and scripts to clean, deduplicate, and standardiz
 
 - `topics.txt`: List of unique cleaned topic labels used in the dataset.
 - `topics.json`: Dictionary mapping original raw topics to cleaned and standardized versions.
+- `wordlist_utf8.txt`: A list of words used for filtering and cleaning the text data. Source: [Dicionários Natura](https://natura.di.uminho.pt/download/sources/Dictionaries/wordlists/).
 
 ## Output
 
